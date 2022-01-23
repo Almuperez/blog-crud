@@ -1,0 +1,22 @@
+
+
+<form action="/list/add_planta" method="POST">
+	<p>Nombre de planta</p>
+	<input name="title" />
+	<p>Descripción</p>
+	<input name="description" />
+	{{!-- <input name="utilidad_id" /> --}}
+	{{!-- con label, select y option hago drop down --}}
+	<div class='form-field'>
+    <label for='brandFilter'>Utilidad de planta</label>
+    <select name="utilidad_id" id='brandFilter' class='form-control'>
+      <option>Elige utilidad de planta</option>
+      {{#each utilidades}}
+	  {{!-- en la terminal cada objeto hace referencia al this --}}
+      <option value="{{this._id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+	<button type="submit">Añadir</button>
+</form>
+<a href="/">Back</a>

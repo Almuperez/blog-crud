@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+<div class="row" style="margin-top:50px">
+  {{#each plantas}}
+    {{#with this}}
+      <div class="col-8">{{title}}</div>
+      <div class="col-8">{{body}}</div>
+      <div class="col-8">{{utilidad}}</div>
+    {{/with}}
+  {{/each}}
+</div>
+{{#if plantas.length}}
+  <h3>Hay {{plantas.length}} planta.</h3>
+
+{{else}}
+  <img
+    src="https://media0.giphy.com/media/l4EoMN9qjAOaaAcNO/200.webp?cid=ecf05e4792c60qrrbtrug3fcpokrb83bhjrf6p2jx0gw5e7h&rid=200.webp&ct=g"
+    alt="Inactive"
+  />
+{{/if}}
